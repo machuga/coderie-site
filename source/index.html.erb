@@ -1,0 +1,34 @@
+---
+title: Coderie | Erie, PA's Software Engineering Community
+---
+
+<section id="main-info">
+  <h2>What We're About</h2>
+
+  <p>
+    The Coderie is a group of software developers in and around the Erie area
+    that believe strongly in the power of community and information sharing. We
+    like to meet up and discuss all sorts of different software development
+    related topics. While we tend to focus on open source software, we welcome
+    topics from proprietary stacks as well - things to learn from everywhere!
+    Some of our members also organize the Erie Day of Code conference. Come join
+    us for good times and working to improve the tech scene in Erie, PA!
+  </p>
+</section>
+
+<section id="events">
+  <h2>Events</h2>
+
+  <li>
+    <% events.each do |event| %>
+      <article>
+        <h2><%= event.formatted_datetime %></h2>
+        <h3><%= event.title %></h3>
+        <% if event.image %>
+          <img class="event-photo" src="<%= event.photo %>">
+        <% end %>
+        <p><%= event.description %></p>
+      </article>
+    <% end %>
+  </li>
+</section>
